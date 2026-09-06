@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/download",
+      "destination": "https://github.com/seracreativo/keyva-web/releases/download/downloads/Keyva-1.0.12.dmg",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/appcast.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/xml" }]
+    }
+  ]
+}

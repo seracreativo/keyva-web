@@ -5,10 +5,10 @@
         <item>
             <title>1.0.12</title>
             <pubDate>Sun, 06 Sep 2026 19:37:42 +0200</pubDate>
-            <sparkle:version>42</sparkle:version>
+            <sparkle:version>44</sparkle:version>
             <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.1</sparkle:minimumSystemVersion>
-            <enclosure url="https://keyva.seracreativo.com/Keyva-1.0.12.dmg" length="14097760" type="application/octet-stream" sparkle:edSignature="OvqnQGY7gVVn3+lq0wcspZbIHi96oq3ayUVJfwRjq9sRNyVu5YVs5W+ejcGu0tzXJwNbtFqSqHy96adU3+j2BA=="/>
+            <enclosure url="https://github.com/seracreativo/keyva-web/releases/download/downloads/Keyva-1.0.12.dmg" length="14098137" type="application/octet-stream" sparkle:edSignature="+y9Gy4nrJYkmoqH6v5yedF7ISUyVh3Ijm5hCVhBNo1EUMNmgIZezv6h/At5dczGPj1zPdFmT3Wq6+0r+DXQNAA=="/>
         </item>
     </channel>
 </rss>
