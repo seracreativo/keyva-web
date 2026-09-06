@@ -8,7 +8,7 @@
             <sparkle:version>42</sparkle:version>
             <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.1</sparkle:minimumSystemVersion>
-            <enclosure url="https://keyva.seracreativo.com/Keyva-1.0.12.dmg" length="15104477" type="application/octet-stream" sparkle:edSignature="XIwvyWOS0DhlnXssignNl2H4OsM3Lm2GeykdOd8A+mUEV255M5ilixoIsBnv92rsWjfSq9XBfbC3+HfY9a8sCw=="/>
+            <enclosure url="https://keyva.seracreativo.com/Keyva-1.0.12.dmg" length="14097760" type="application/octet-stream" sparkle:edSignature="OvqnQGY7gVVn3+lq0wcspZbIHi96oq3ayUVJfwRjq9sRNyVu5YVs5W+ejcGu0tzXJwNbtFqSqHy96adU3+j2BA=="/>
         </item>
     </channel>
 </rss>
