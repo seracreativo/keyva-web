@@ -1,0 +1,270 @@
+/* Keyva — keyva.seracreativo.com */
+
+:root {
+    --ink: #16161a;
+    --ink-soft: #55555f;
+    --ink-faint: #8a8a95;
+    --paper: #ffffff;
+    --paper-tint: #f6f6f8;
+    --line: #e6e6ec;
+    --accent: #16161a;
+    --radius: 14px;
+    --measure: 34rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ink: #f2f2f5;
+        --ink-soft: #a8a8b3;
+        --ink-faint: #71717d;
+        --paper: #0e0e11;
+        --paper-tint: #17171c;
+        --line: #26262e;
+        --accent: #f2f2f5;
+    }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* One column, centred, with room to breathe on either side. Everything on the
+   site sits in this grid so headings, prose and cards line up down the page. */
+.wrap {
+    width: min(64rem, 100% - 3rem);
+    margin-inline: auto;
+}
+
+a { color: inherit; }
+
+/* Header */
+
+.site-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    font-size: 0.9rem;
+}
+
+.site-head nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.site-head a {
+    color: var(--ink-faint);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.site-head a:hover { color: var(--ink); }
+
+.mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.mark img { width: 26px; height: 26px; border-radius: 6px; }
+
+/* Hero */
+
+.hero {
+    padding: 4.5rem 0 3.5rem;
+    border-bottom: 1px solid var(--line);
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+}
+
+.lede {
+    max-width: var(--measure);
+    margin: 0 0 2rem;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+}
+
+/* Buttons */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--paper);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.button:hover { opacity: 0.85; }
+
+.button.ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+.note {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+}
+
+/* Sections */
+
+section { padding: 3.5rem 0; }
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 2rem 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+p { max-width: var(--measure); }
+
+section > p:first-of-type { margin-top: 0; }
+
+/* Two columns where there is room, one where there is not. Not flex: the cards
+   have to line up across rows, and only a grid does that. */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.card {
+    padding: 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-tint);
+}
+
+.card h3 { margin-top: 0; }
+
+.card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+}
+
+/* Price */
+
+.price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.price strong {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.price span {
+    color: var(--ink-faint);
+    font-size: 0.9rem;
+}
+
+/* Long-form pages */
+
+.prose {
+    max-width: 42rem;
+    padding: 2.5rem 0 4rem;
+}
+
+.prose h1 { font-size: clamp(1.9rem, 4vw, 2.4rem); }
+
+.prose h2 {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 1.2rem;
+}
+
+.prose li { margin-bottom: 0.4rem; }
+
+.prose .updated {
+    margin-top: 0;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+}
+
+code {
+    padding: 0.15em 0.4em;
+    border-radius: 5px;
+    background: var(--paper-tint);
+    font: 0.9em ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* A block of shell, which has to scroll inside itself rather than pushing the
+   page sideways. */
+pre {
+    overflow-x: auto;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-tint);
+    font: 0.85rem/1.6 ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+pre code { padding: 0; background: none; }
+
+/* Footer */
+
+.site-foot {
+    padding: 2.5rem 0 3.5rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+}
+
+.site-foot nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.site-foot a { text-decoration: none; }
+
+.site-foot a:hover { color: var(--ink); }

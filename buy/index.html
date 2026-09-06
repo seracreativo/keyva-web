@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy Keyva — a licence, not a subscription</title>
+<meta name="description" content="A one-off licence for Keyva on the Mac: twelve months of updates, and the versions it covers are yours forever.">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/icon.png">
+</head>
+<body>
+
+<header class="site-head wrap">
+    <a class="mark" href="/"><img src="/icon.png" alt=""> Keyva</a>
+    <nav>
+        <a href="/#tools">Terminal &amp; agents</a>
+        <a href="/#pricing">Pricing</a>
+    </nav>
+</header>
+
+<div class="wrap">
+
+<section class="hero">
+    <h1>A licence, not a&nbsp;subscription.</h1>
+    <p class="lede">
+        Pay once. You get twelve months of updates, and every version published in
+        that time stays yours — with Premium — for as long as you keep using it.
+        Nothing stops working on a date you forgot.
+    </p>
+    <div class="actions">
+        <a class="button" id="buy" href="#">Request a licence</a>
+        <a class="button ghost" href="/Keyva-1.0.12.dmg">Try it first</a>
+    </div>
+    <p class="note">€59 for twelve months of updates · €39 for six · VAT included</p>
+</section>
+
+<section>
+    <h2>How it works</h2>
+
+    <h3>1 · Send us your account code</h3>
+    <p>
+        Open Keyva on your Mac, go to Settings → Premium → Manage &amp; Restore, and
+        press <em>Show my account code</em>. It is 22 characters and it identifies
+        your iCloud account without telling us who you are — we never see your name
+        or your email address through it.
+    </p>
+
+    <h3>2 · We send you a payment link</h3>
+    <p>By return email. Nothing is charged until you use it.</p>
+
+    <h3>3 · You get your licence</h3>
+    <p>
+        A line of text starting with <code>KV1</code>. Paste it into the same panel
+        and press Activate. It is stored in your iCloud keychain, so it appears on
+        your other devices on its own — including the App Store copies on your iPhone
+        and iPad.
+    </p>
+
+    <h2>Why the code, and not just an email address</h2>
+    <p>
+        The licence is signed with your account code inside it, so it works on every
+        device you own and on nobody else's. That code only exists on your Mac; at
+        the moment you pay, we do not know it yet. Asking afterwards is a round trip
+        that gets lost, so the app writes the email for you.
+    </p>
+
+    <h2>What happens after twelve months</h2>
+    <p>
+        Nothing, unless you want something newer. Keyva keeps working with Premium on
+        every version published while your licence ran. Renewing buys the versions
+        after that. It holds the credentials you work with every day; locking you out
+        of them because a date passed would be the wrong way round.
+    </p>
+
+    <h2>Questions</h2>
+    <h3>Can I use it on my iPhone?</h3>
+    <p>
+        Your licence carries over through the iCloud keychain, so the App Store copies
+        on your other devices recognise it. What they cannot do is activate one —
+        that only happens here, on the Mac.
+    </p>
+    <h3>Is there a refund?</h3>
+    <p>
+        Write to us within 14 days and we return it, no questions. Try the free plan
+        first: it does not expire.
+    </p>
+    <h3>I bought a subscription on the App Store. Do I need this?</h3>
+    <p>No. Either one gives you Premium everywhere. Having both changes nothing.</p>
+</section>
+
+</div>
+
+<footer class="site-foot wrap">
+    <span>Sera Creativo</span>
+    <nav>
+        <a href="/">Keyva</a>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="mailto:keyva@seracreativo.com">Support</a>
+    </nav>
+</footer>
+
+<script>
+// Written in script so the address is not sitting in the markup for a crawler to
+// harvest. Everything else on this page works without JavaScript; this only
+// prefills a mail draft.
+(function () {
+    var body = [
+        "Hi,",
+        "",
+        "I'd like to buy a Keyva licence.",
+        "",
+        "My account code is:",
+        "(Settings → Premium → Manage & Restore → Show my account code)",
+        "",
+        "Send me the payment link and I'll take it from there.",
+        "",
+        "Thanks."
+    ].join("\n");
+    var a = document.getElementById("buy");
+    a.href = "mailto:keyva@seracreativo.com"
+        + "?subject=" + encodeURIComponent("Keyva licence")
+        + "&body=" + encodeURIComponent(body).replace(/%20/g, "%20");
+})();
+</script>
+
+</body>
+</html>

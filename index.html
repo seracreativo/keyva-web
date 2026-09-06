@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyva — environment variables, kept properly</title>
+<meta name="description" content="A Mac app for the API keys, tokens and connection strings you work with every day. Encrypted, synced through iCloud, and reachable from your terminal and your coding agent.">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/icon.png">
+</head>
+<body>
+
+<header class="site-head wrap">
+    <a class="mark" href="/"><img src="/icon.png" alt=""> Keyva</a>
+    <nav>
+        <a href="#tools">Terminal &amp; agents</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/buy/">Buy</a>
+    </nav>
+</header>
+
+<div class="wrap">
+
+<section class="hero">
+    <h1>Your keys, where you can find&nbsp;them.</h1>
+    <p class="lede">
+        Keyva keeps the API keys, tokens and connection strings you work with every
+        day — encrypted on your devices, synced through your own iCloud, and never
+        on anybody's server. Including ours.
+    </p>
+    <div class="actions">
+        <a class="button" href="/Keyva-1.0.12.dmg">Download for Mac</a>
+        <a class="button ghost" href="/buy/">Buy a licence</a>
+    </div>
+    <p class="note">
+        Universal, macOS 26.1 or later. Also on the App&nbsp;Store if you prefer a subscription.
+    </p>
+</section>
+
+<section>
+    <h2>What it does</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Projects, environments, variables</h3>
+            <p>The shape you already work in: one project, its development, staging and production, and the values that differ between them.</p>
+        </div>
+        <div class="card">
+            <h3>Secrets, actually secret</h3>
+            <p>Marked values go to the Keychain and an encrypted store, never into the database in the clear. They sync end-to-end through iCloud.</p>
+        </div>
+        <div class="card">
+            <h3>Import and export what you have</h3>
+            <p>Reads and writes <code>.env</code>, JSON, YAML and xcconfig. Bring a folder of dotfiles in; take a single environment out.</p>
+        </div>
+        <div class="card">
+            <h3>Nothing leaves your devices</h3>
+            <p>There is no Keyva account and no Keyva server. Sync is your iCloud, between your Macs, iPhones and iPads.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tools">
+    <h2>Your terminal and your coding agent</h2>
+    <p>
+        Keyva ships with <code>keyva</code> and an MCP server, so the tools you already
+        use can read what you store without you pasting anything.
+    </p>
+
+<pre><code>keyva run dev            # start the dev server with the real values injected
+keyva pull production    # write a .env, 0600, and add it to .gitignore
+keyva scan               # find a secret you are one commit from publishing</code></pre>
+
+    <p>
+        Point Claude Code or any MCP client at the server and it stops asking you for
+        keys — it looks them up, and writes back the ones it generates.
+    </p>
+
+    <h3>Why the version from this page can do more</h3>
+    <p>
+        Everything inside a Mac App Store app runs in a sandbox, and a sandbox does
+        not answer "not allowed" — it answers "nothing there". So the bundled server
+        reports a clean scan of a repository full of files. This build is not
+        sandboxed, so scanning your project, writing a <code>.env</code> next to your
+        code and running commands with your values all work from inside the app,
+        with nothing extra to install.
+    </p>
+</section>
+
+<section id="pricing">
+    <h2>Two ways to pay, and they do the same thing</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Licence</h3>
+            <div class="price"><strong>€59</strong> <span>once</span></div>
+            <p>
+                Twelve months of updates, and the versions it covers are yours
+                forever. Tied to your iCloud account, so it works on every Mac you
+                own. Six months for €39.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Subscription</h3>
+            <div class="price"><strong>App&nbsp;Store</strong></div>
+            <p>
+                Monthly or yearly, through Apple, on iPhone and iPad too. Cancel
+                whenever you like from your Apple account.
+            </p>
+        </div>
+    </div>
+    <p class="note" style="margin-top:1.5rem">
+        The free plan is a plan, not a trial: three projects, three environments each,
+        25 variables per environment, and <code>.env</code> export. It does not expire.
+    </p>
+</section>
+
+</div>
+
+<footer class="site-foot wrap">
+    <span>Sera Creativo</span>
+    <nav>
+        <a href="/buy/">Buy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="mailto:keyva@seracreativo.com">Support</a>
+    </nav>
+</footer>
+
+</body>
+</html>
