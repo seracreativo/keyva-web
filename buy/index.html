@@ -28,7 +28,7 @@
         Nothing stops working on a date you forgot.
     </p>
     <div class="actions">
-        <a class="button" id="buy" href="#">Request a licence</a>
+        <a class="button" href="https://buy.stripe.com/00wdRacS96T702j9VyfrW00">Buy a licence — €39</a>
         <a class="button ghost" href="/download">Try it first</a>
     </div>
     <p class="note">€39, VAT included · twelve months of updates · renewing another year, €19</p>
@@ -37,7 +37,7 @@
 <section>
     <h2>How it works</h2>
 
-    <h3>1 · Send us your account code</h3>
+    <h3>1 · Copy your account code</h3>
     <p>
         Open Keyva on your Mac, go to Settings → Premium → Manage &amp; Restore, and
         press <em>Show my account code</em>. It is 22 characters and it identifies
@@ -45,23 +45,27 @@
         or your email address through it.
     </p>
 
-    <h3>2 · We send you a payment link</h3>
-    <p>By return email. Nothing is charged until you use it.</p>
-
-    <h3>3 · You get your licence</h3>
+    <h3>2 · Pay, and paste the code in the form</h3>
     <p>
-        A line of text starting with <code>KV1</code>. Paste it into the same panel
-        and press Activate. It is stored in your iCloud keychain, so it appears on
-        your other devices on its own — including the App Store copies on your iPhone
-        and iPad.
+        The checkout asks for it. Without it we cannot sign a licence for your
+        account, so it is the one field that matters.
+    </p>
+
+    <h3>3 · Your licence arrives by email</h3>
+    <p>
+        Within a day, usually much less — it is signed by hand against your code, so
+        it is not instant. A line of text starting with <code>KV1</code>: paste it
+        into the same panel and press Activate. It is stored in your iCloud keychain,
+        so it appears on your other devices on its own, including the App Store
+        copies on your iPhone and iPad.
     </p>
 
     <h2>Why the code, and not just an email address</h2>
     <p>
         The licence is signed with your account code inside it, so it works on every
-        device you own and on nobody else's. That code only exists on your Mac; at
-        the moment you pay, we do not know it yet. Asking afterwards is a round trip
-        that gets lost, so the app writes the email for you.
+        device you own and on nobody else's. That code only exists on your Mac —
+        nobody can look it up, which is why the checkout asks you for it rather than
+        working it out.
     </p>
 
     <h2>Or just subscribe</h2>
@@ -87,6 +91,8 @@
         on your other devices recognise it. What they cannot do is activate one —
         that only happens here, on the Mac.
     </p>
+    <h3>How do I renew?</h3>
+    <p>Write to keyva@seracreativo.com when your twelve months are close. €19 for another year.</p>
     <h3>Is there a refund?</h3>
     <p>
         Write to us within 14 days and we return it, no questions. Try the free plan
@@ -107,30 +113,6 @@
         <a href="mailto:keyva@seracreativo.com">Support</a>
     </nav>
 </footer>
-
-<script>
-// Written in script so the address is not sitting in the markup for a crawler to
-// harvest. Everything else on this page works without JavaScript; this only
-// prefills a mail draft.
-(function () {
-    var body = [
-        "Hi,",
-        "",
-        "I'd like to buy a Keyva licence.",
-        "",
-        "My account code is:",
-        "(Settings → Premium → Manage & Restore → Show my account code)",
-        "",
-        "Send me the payment link and I'll take it from there.",
-        "",
-        "Thanks."
-    ].join("\n");
-    var a = document.getElementById("buy");
-    a.href = "mailto:keyva@seracreativo.com"
-        + "?subject=" + encodeURIComponent("Keyva licence")
-        + "&body=" + encodeURIComponent(body).replace(/%20/g, "%20");
-})();
-</script>
 
 </body>
 </html>
